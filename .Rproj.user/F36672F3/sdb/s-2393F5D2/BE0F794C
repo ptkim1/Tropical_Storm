@@ -1,0 +1,17 @@
+{
+    "contents" : "# ===================================================================== \n# Skeleton script for Final Project\n# Author(s): Jeff Grant and Paul Kim\n# Date: 08-11-2015 \n# Description: This code creates the directories and downloads raw data files.\n#              It also writes the READMD.md file.  \n# =====================================================================\n\n#Creating directories\ndir.create(\"code\")\ndir.create(\"rawdata\")\ndir.create(\"data\")\ndir.create(\"resources\")\ndir.create(\"report\")\ndir.create(\"images\")\n\n#Downloading data:\n#For analysis\ndownload.file(\"ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r06/wmo/hurdat_format/basin/Basin.NA.ibtracs_hurdat.v03r06.hdat\"\n               ,\"./rawdata/storms.txt\")\n#For Visualizations\ndownload.file(\"ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r06/wmo/csv/basin/Basin.NA.ibtracs_wmo.v03r06.csv\",\n              \"./rawdata/raw_NA.csv\")\ndownload.file(\"ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r06/wmo/csv/basin/Basin.EP.ibtracs_wmo.v03r06.csv\",\n              \"./rawdata/raw_EP.csv\")\n\n#Writing README.md\n\nfile.create(\"README.md\")\ncat(\n\"# Tropical Storms \n\n### Introduction\n\nThis project presents an analysis of tropical storm data from  the National Climate Data Center's International Best Track Archive for Climate Stewardship (IBTrACS). It specifically focuses on storms between 1980 and 2013. \n\n### Authors\nPaul Kim, luapkim@berkeley.edu\n\nJeff Grant grantj@berkeley.edu\n\n### Organization\nThe project folder contains the following directories and files. \n- code: contains all .R script files\n- rawdata: contains all unprocessed data, downloaded via the skeleton.R file\n- data: contains the processed and cleaned data\n- resources: contains any downloaded resource files\n- report: contains the project report RMarkdown form, as well as the corresponding pdf\n- images: contains all images and plots\n- README.md is this document\n- skeleton.R is an R script that creates the directories and this README.md file, and also downloads raw data into the rawdata directory. \n\"\n, file = \"README.md\")\n",
+    "created" : 1439596596800.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "585501000",
+    "id" : "BE0F794C",
+    "lastKnownWriteTime" : 1439597679,
+    "path" : "~/Desktop/Final_Project/skeleton.R",
+    "project_path" : "skeleton.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
